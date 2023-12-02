@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackout</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background: black;
+        color: white;
+      }
+
+      body {
+        display: flex;
+        place-content: center;
+        place-items: center;
+      }
+
+      body:hover,
+      body:focus-within {
+        --content-opacity: 1;
+      }
+
+      button {
+        opacity: var(--content-opacity, 0.05);
+        transition: opacity 0.5s 0.3s linear;
+        margin: 0;
+        border: 0;
+        padding: 0;
+        background: transparent;
+        color: currentColor;
+      }
+
+      button svg {
+        display: block;
+        width: 50vmin;
+        height: 50vmin;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" aria-label="Exit Blackout Mode">
+      <!--
+        close_fullscreen icon from Material Icons
+        https://github.com/google/material-design-icons/blob/a90037f80d7db37279a7c1d863559e247ed81b05/src/action/close_fullscreen/materialicons/24px.svg
+      -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="currentColor"
+          d="M22 3.41 16.71 8.7 20 12h-8V4l3.29 3.29L20.59 2 22 3.41zM3.41 22l5.29-5.29L12 20v-8H4l3.29 3.29L2 20.59 3.41 22z"
+        />
+      </svg>
+    </button>
+    <script src="window.js"></script>
+  </body>
+</html>
