@@ -1,0 +1,11 @@
+{
+  "name": "blackout",
+  "version": "1.0.0",
+  "description": "I made this extension to black out other screens when watching movies on my main monitor in dark environment.",
+  "scripts": {
+    "build": "web-ext build"
+  },
+  "devDependencies": {
+    "web-ext": "^7.8.0"
+  }
+}
